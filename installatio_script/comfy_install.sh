@@ -42,6 +42,7 @@ repos=(
     "https://github.com/rgthree/rgthree-comfy.git"
     "https://github.com/WASasquatch/was-node-suite-comfyui.git"
     "https://github.com/chibiace/ComfyUI-Chibi-Nodes.git"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
 )
 
 # Clone each repository in the list
