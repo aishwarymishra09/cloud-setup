@@ -42,6 +42,7 @@ repos=(
     "https://github.com/rgthree/rgthree-comfy.git"
     "https://github.com/WASasquatch/was-node-suite-comfyui.git"
     "https://github.com/chibiace/ComfyUI-Chibi-Nodes.git"
+    "https://github.com/frankchieng/ComfyUI_MagicClothing.git"
 )
 
 # Clone each repository in the list
@@ -68,8 +69,16 @@ wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pru
 wget https://huggingface.co/ckpt/crystalclear-xl/resolve/main/crystalClearXL_ccxl.safetensors?download=true
 
 # Rename the downloaded file
-mv crystalClearXL_ccxl.safetensors?download=true ClearXL_ccxl.safetensors
+mv crystalClearXL_ccxl.safetensors?download=true crystalClearXL_ccxl.safetensors
 
 cd ../controlnet
 wget https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank256/control-lora-canny-rank256.safetensors
+
+cd ../../custom_nodes/ComfyUI_MagicClothing/checkpoints
+wget https://huggingface.co/ShineChen1024/MagicClothing/resolve/main/cloth_segm.pth?download=true
+wget https://huggingface.co/ShineChen1024/MagicClothing/resolve/main/magic_clothing_768_vitonhd_joint.safetensors?download=true
+
+mv cloth_segm.pth?download=true cloth_segm.pth
+mv magic_clothing_768_vitonhd_joint.safetensors?download=true magic_clothing_768_vitonhd_joint.safetensors
+
 echo "All repositories have been cloned, requirements installed, and model files downloaded successfully."
