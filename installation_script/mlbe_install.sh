@@ -12,11 +12,11 @@ git clone https://github.com/aishwarymishra09/ml-be.git
 # Change to the ml-be directory
 cd ml-be
 
-# Checkout to the bgswap branch
-git checkout bgswap
+# Checkout to the clothing branch
+git checkout clothing
 
-# Pull the latest changes from the bgswap branch
-git pull origin bgswap
+# Pull the latest changes from the clothing branch
+git pull origin clothing
 
 # Install the requirements
 pip3 install -r requirements.txt

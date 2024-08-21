@@ -22,11 +22,21 @@ for script in *.sh;
 do
   chmod +x $script
 done
+bash ./comfy_install.sh
+bash ./mlbe_install.sh
+cd ../../
+mv cloud-setup/installation_script/ComfyUI .
+mv cloud-setup/installation_script/mlbe .
+cd $SCRIPT_DIR
+bash ./mlbe_service.sh
+bash ./comfy_service_c.sh
 
 # Run each script
-for script in *.sh;
-do
-  ./$script
-done
-
+#for script in *.sh;
+#do
+#  ./$script
+#done
+#cd ../../
+#mv cloud-setup/installation_script/ComfyUI .
+#mv cloud-setup/installation_script/mlbe .
 echo "All scripts executed successfully."
