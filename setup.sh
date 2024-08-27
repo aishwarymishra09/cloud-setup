@@ -6,7 +6,7 @@ CLONE_DIR="cloud-setup"
 SCRIPT_DIR="$CLONE_DIR/installation_script"
 
 # Clone the repository
-git clone $REPO_URL
+#git clone $REPO_URL
 
 # Check if the clone was successful
 if [ ! -d "$CLONE_DIR" ]; then
@@ -28,8 +28,22 @@ cd ../../
 mv cloud-setup/installation_script/ComfyUI .
 mv cloud-setup/installation_script/mlbe .
 cd $SCRIPT_DIR
-bash ./mlbe_service.sh
-bash ./comfy_service_c.sh
+#bash ./mlbe_service.sh
+#bash ./comfy_service_c.sh
+
+############################################################
+#                   for runpod                             #
+############################################################
+cd mlbe/ml-be
+nohup python3 main.py &> output.log &
+
+cd ../../ComfyUI
+python3 main.py --listen "0.0.0.0" &> comfy_out.log &
+
+############################################################
+#                   for runpod                             #
+############################################################
+
 
 # Run each script
 #for script in *.sh;
