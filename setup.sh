@@ -27,17 +27,17 @@ bash ./mlbe_install.sh
 cd ../../
 mv cloud-setup/installation_script/ComfyUI .
 mv cloud-setup/installation_script/mlbe .
-cd $SCRIPT_DIR
+#cd $SCRIPT_DIR
 #bash ./mlbe_service.sh
 #bash ./comfy_service_c.sh
 
 ############################################################
 #                   for runpod                             #
 ############################################################
-cd mlbe/ml-be
+cd mlbe/ml-be/
 nohup python3 main.py &> output.log &
 
-cd ../../ComfyUI
+cd ../../ComfyUI/
 python3 main.py --listen "0.0.0.0" &> comfy_out.log &
 
 ############################################################
