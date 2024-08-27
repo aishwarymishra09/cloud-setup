@@ -38,7 +38,7 @@ cd mlbe/ml-be/
 nohup python3 main.py &> output.log &
 
 cd ../../ComfyUI/
-python3 main.py --listen "0.0.0.0" &> comfy_out.log &
+nohup python3 main.py --listen "0.0.0.0" &> comfy_out.log &
 
 ############################################################
 #                   for runpod                             #
